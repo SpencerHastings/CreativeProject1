@@ -10,59 +10,94 @@
     <body>
         <div class="container">
             <div class="page-header">
-                <h1>Mad Lib</h1>
-            </div>
-            
-            <form>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Welcome to our Mad Lib game! Please enter a word into each textbox that matches the description</label>
-                    <input type="text" class="form-control my-2" id="input1" placeholder="adjective">
-                    <input type="text" class="form-control my-2" id="input2" placeholder="adjective">
-                    <input type="text" class="form-control my-2" id="input3" placeholder="noun">
-                    <input type="text" class="form-control my-2" id="input4" placeholder="noun">
-                    <input type="text" class="form-control my-2" id="input5" placeholder="plural noun">
-                    <input type="text" class="form-control my-2" id="input6" placeholder="name of game">
-                    <input type="text" class="form-control my-2" id="input7" placeholder="plural noun">
-                    <input type="text" class="form-control my-2" id="input8" placeholder="verb ending in 'ing">
-                    <input type="text" class="form-control my-2" id="input9" placeholder="verb ending in 'ing">
-                    <input type="text" class="form-control my-2" id="input10" placeholder="plural noun">
-                    <input type="text" class="form-control my-2" id="input11" placeholder="verb ending in 'ing">
-                    <input type="text" class="form-control my-2" id="input12" placeholder="noun">
-                    <input type="text" class="form-control my-2" id="input13" placeholder="name of plant">
-                    <input type="text" class="form-control my-2" id="input14" placeholder="name of body part">
-                    <input type="text" class="form-control my-2" id="input15" placeholder="name of a place">
-                    <input type="text" class="form-control my-2" id="input16" placeholder="verb ending in 'ing">
-                    <input type="text" class="form-control my-2" id="input17" placeholder="adjective">
-                    <input type="text" class="form-control my-2" id="input18" placeholder="number">
-                    <input type="text" class="form-control my-2" id="input19" placeholder="plural noun">
+                <div class="media">
+                    <span class="media-body">
+                        <h1 class="display-1 m-4">Mad Lib</h1>
+                    </span>
+                    <div class="media-right">
+                        <img style="float:right" src="vacation.png" class="img-fluid myImage" alt="Responsive image">
+                    </div>
                 </div>
-            </form>
-            
-            <button type="button" class="btn submit-button" onclick="myFunction(event)">Submit</button>
-            
-            <p class="my-2" id="lib-text">Your story will be here!</p>
-            
+            </div>
+            <label class="m-2">Welcome to our Mad Lib game! This story is about an awesome vacation. Please enter a word into each textbox that matches the description. When you are done, press the Submit button at the bottom of the page. To clear the form and story, press the Reset button at the bottom of the page.</label>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form id="resets">
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control my-2" id="input1" placeholder="adjective">
+                            <input type="text" class="form-control my-2" id="input2" placeholder="adjective">
+                            <input type="text" class="form-control my-2" id="input3" placeholder="noun">
+                            <input type="text" class="form-control my-2" id="input4" placeholder="noun">
+                            <input type="text" class="form-control my-2" id="input5" placeholder="plural noun">
+                            <input type="text" class="form-control my-2" id="input6" placeholder="name of game">
+                            <input type="text" class="form-control my-2" id="input7" placeholder="plural noun">
+                            <input type="text" class="form-control my-2" id="input8" placeholder="verb ending in 'ing">
+                            <input type="text" class="form-control my-2" id="input9" placeholder="verb ending in 'ing">
+                            <input type="text" class="form-control my-2" id="input10" placeholder="plural noun">
+                            <input type="text" class="form-control my-2" id="input11" placeholder="verb ending in 'ing">
+                            <input type="text" class="form-control my-2" id="input12" placeholder="noun">
+                            <input type="text" class="form-control my-2" id="input13" placeholder="name of plant">
+                            <input type="text" class="form-control my-2" id="input14" placeholder="name of body part">
+                            <input type="text" class="form-control my-2" id="input15" placeholder="name of a place">
+                            <input type="text" class="form-control my-2" id="input16" placeholder="verb ending in 'ing">
+                            <input type="text" class="form-control my-2" id="input17" placeholder="adjective">
+                            <input type="text" class="form-control my-2" id="input18" placeholder="number">
+                            <input type="text" class="form-control my-2" id="input19" placeholder="plural noun">
+                        </div>
+                    </form>
+                    
+                    <button type="button" class="btn submit-button my-2" onclick="myFunction(event)">Submit</button>
+                    <button type="button" class="btn submit-button my-2" onclick="myResetFunction()">Reset</button>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title display-4">Vacations</h5>
+                            <font class="outputText" id="lib-text">Your story will be here!</font>
+                        </div>
+                    </div>
+                    <!--
+                    <h3 class="my-2" id="lib-text">Your story will be here!</h3>
+                    -->
+                </div>
+            </div>
         </div>
     </body>
     
     <script>
         function myFunction(event) { 
-            var str = "A vacation is when you take a trip to some output1 place with your output2 family. Usually you go to some place that is near a/an output3 or up on a/an output4. A good vacation place is one where you can ride output5 or play output6 or go hunting for output7. I like to spend my time output8 or output9. When  parents  go  on  a  vacation,  they  spend  their  time  eating three output10 a day, and fathers play golf, and mothers sit around output11. Last summer, my little brother fell  in  a/an output12 and  got  poison output13 all over  his output14. My  family  is  going  to  go  to  (the) output15, and I will practice output16. Parents need vacations more than kids because parents are always very output17 and because they have to work output18 hours every day all year making enough output19 to pay for the vacation.";
-            
+            var str = "<font class=\"outputText\">A vacation is when you take a trip to some output1 place with your output2 family. Usually you go to some place that is near a/an output3 or up on a/an output4. A good vacation place is one where you can ride output5 or play output6 or go hunting for output7. I like to spend my time output8 or output9. When  parents  go  on  a  vacation,  they  spend  their  time  eating three output10 a day, and fathers play golf, and mothers sit around output11. Last summer, my little brother fell  in  a/an output12 and  got  poison output13 all over  his output14. My  family  is  going  to  go  to  (the) output15, and I will practice output16. Parents need vacations more than kids because parents are always very output17 and because they have to work output18 hours every day all year making enough output19 to pay for the vacation.";
             
             var i;
             for (i = 1; i < 20; i++)
             {
                 var out = "output" + i;
                 var inp = "input" + i;
-                str = str.replace(out, document.getElementById(inp).value);
+                if (document.getElementById(inp).value == "")
+                {
+                    str = str.replace(out, "<font color=\"red\">BLANK</font>");
+                }
+                else
+                {
+                    str = str.replace(out, "<font color=\"blue\">" + document.getElementById(inp).value + "</font>");
+                }
                 
             }
             
             
             
             document.getElementById("lib-text").innerHTML= str;
+            
+            var elmnt = document.getElementById("title");
+            elmnt.scrollIntoView();
+            
             event.preventDefault();
+        }
+        
+        function myResetFunction() {
+            document.getElementById("resets").reset();
+            document.getElementById("lib-text").innerHTML= "Your story will be here!";
         }
         
     </script>

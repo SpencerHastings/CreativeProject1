@@ -3,10 +3,22 @@ h1{
 }
 
 body{
-    background-color: #eaece5;
+    background-color: #E3FBFF;
 }
 
 .submit-button{
     background-color: #b2c2bf;
     color: #3b3a30;
+}
+
+.outputText {
+    font-size: x-large;
+}
+
+.media-body{
+    white-space: nowrap;
+}
+
+.myImage{
+    border-radius:5px;
 }
